@@ -1,16 +1,13 @@
 import "./ExpenseItem.css";
 
-function ExpenseItem() {
-    const expenseTitle = 'Petrol'
-    const expensePrice = 200
-    const expenseLocation = 'delhi'
+function ExpenseItem(props) {
   return (
     <div>
       <div className="expense-item">
         <div className="expense-item__description">
-          <h2>{expenseTitle}</h2>
-          <div className="expense-item__location">{expenseLocation}</div>
-          <div className="expense-item__price">{expensePrice}</div>
+          <h2>{props.title}</h2>
+          <div className="expense-item__location">{props.location}</div>
+          <div className="expense-item__price">{props.price}</div>
         </div>
       </div>
     </div>
