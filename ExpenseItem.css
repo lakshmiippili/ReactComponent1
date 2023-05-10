@@ -46,6 +46,16 @@
   border-radius: 12px;
 }
 
+.button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #40005d;
+  border: 1px solid white;
+  padding: 0.5 rem;
+  border-radius: 12px;
+}
+
 @media (min-width: 580px) {
   .expense-item__description {
     flex-direction: row;
