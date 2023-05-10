@@ -4,6 +4,9 @@ import Card from "../UI/Card";
 import "./ExpenseItem.css";
 
 const ExpenseItem=(props)=> {
+  const deleteHandler = ()=>{
+      
+  }
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
@@ -12,6 +15,7 @@ const ExpenseItem=(props)=> {
         price={props.price}
         location={props.location}
       />
+      <button onClick={deleteHandler}>Delete</button>
     </Card>
   );
 }
