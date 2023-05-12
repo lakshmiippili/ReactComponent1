@@ -18,9 +18,19 @@ const ExpenseForm = () => {
   const locationChangeHandler = (event) => {
     setEnteredLocation(event.target.value);
   };
+  const submitHandler=(event)=>{
+    event.preventDefault() // this here prevents form from sending a request to server
+    const expenseData ={
+        title:enteredTitle,
+        price:enteredPrice,
+        date: new Date(enteredDate),
+        location: enteredLocation
+    }
+    console.log(expenseData)
+  }
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
